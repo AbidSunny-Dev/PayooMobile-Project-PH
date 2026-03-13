@@ -39,7 +39,7 @@ document.getElementById('cashout-btn').addEventListener('click' , function(){
     totalBalanceOnAccount.innerText = newBalance ;
    }else{
 
-    
+
     alert('Invalid Pin');
 
     return;
@@ -55,4 +55,4 @@ document.getElementById('cashout-btn').addEventListener('click' , function(){
 
 
 
-})
+});
