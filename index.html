@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = 'light'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,8 @@
           
         <!-- favicon link -->
         <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-        <title>payoo Mobile</title>
+        <title>Payoo Mobile</title>
+
         <style>
           *{
               font-family: "Outfit", sans-serif;
@@ -30,11 +31,46 @@
    
 </head>   
 
-   <!-- ----------------------------------------- -->
 
-<body>
-      <h1 class="bg">
-        hello
-      </h1>
+<body class="min-h-screen max-w-md mx-auto bg-base-200">
+      
+
+ 
+ <div class="w-[200px] mx-auto pt-32 logo">
+  <img src="./assets/Logo-full.png" alt="">
+ </div>
+
+
+ <div class="form-container">
+
+<div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto mt-10 rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-neutral ">Mobile Number</label>
+          <input value="01234567890" id="input-number" type="text" maxlength="11" minlength="11" class="input rounded-full bg-base-200" placeholder="Type your 11 digit Number" />
+
+          <br>
+          <label class="label font-bold text-neutral">4 Digit Pin</label>
+          <input id="input-pin"  type="password" maxlength="4" class="input rounded-full bg-base-200" placeholder="Enter your 4 digit pin" />
+          
+          <button  id="login-btn"  class="btn btn-primary rounded-full  mt-4 font-semibold">Login</button>
+        </fieldset>
+      </div>
+    </div>
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+<script src="./script/login.js"></script>
 </body>
 </html>
