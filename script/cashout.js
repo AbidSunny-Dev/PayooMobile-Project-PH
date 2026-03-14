@@ -1,8 +1,7 @@
 document.getElementById('cashout-btn').addEventListener('click' , function(){
 
-   const cashoutNumberInput = document.getElementById('cashout-number');
 
-   const cashoutNumber = cashoutNumberInput.value ;
+   const cashoutNumber = getValueInput('cashout-number');
    
    if(cashoutNumber.length != 11){
     alert('Invalid Agent Number');
@@ -10,17 +9,16 @@ document.getElementById('cashout-btn').addEventListener('click' , function(){
     return ;
    }
 
-   const cashoutAmountInput = document.getElementById("cashout-amount") ;
 
-   const cashoutAmount = cashoutAmountInput.value ;
+   const cashoutAmount = getValueInput("cashout-amount");
 
    
 
-   const totalBalanceOnAccount = document.getElementById('balance');
+  
 
-   const totalBalance = totalBalanceOnAccount.innerText;
+   const totalBalance = getBalance(); 
 
-   const newBalance = Number(totalBalance) - Number(cashoutAmount);
+   const newBalance =totalBalance - Number(cashoutAmount);
 
 
    if(newBalance<0){
@@ -36,7 +34,8 @@ document.getElementById('cashout-btn').addEventListener('click' , function(){
    if(cashoutPin == '1234'){
     alert('Cashout Successful');
 
-    totalBalanceOnAccount.innerText = newBalance ;
+   setBalance(newBalance);
+
    }else{
 
 
