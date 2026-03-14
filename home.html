@@ -86,30 +86,30 @@
     <div class="btn-container grid grid-cols-3 gap-3">
 
 
-  <div class="btn btn-primary btn-soft flex-col h-full py-4">
+  <button onclick="showOnly('add-money')" class="btn btn-primary btn-soft flex-col h-full py-4">
     <img src="./assets/opt-1.png" alt="">
     <p class="opacity-50">Add Money</p>
-  </div>
-  <div class="btn btn-primary btn-soft flex-col h-full py-4">
+  </button>
+  <button  onclick="showOnly('cashout')" class="btn btn-primary btn-soft flex-col h-full py-4">
     <img src="./assets/opt-2.png" alt="">
     <p class="opacity-50">Cashout</p>
-  </div>
-  <div class="btn btn-primary btn-soft flex-col h-full py-4">
+  </button>
+  <button  onclick="showOnly('transfer-money')" class="btn btn-primary btn-soft flex-col h-full py-4">
     <img src="./assets/opt-3.png" alt="">
     <p class="opacity-50">Transfer Money</p>
-  </div>
-  <div class="btn btn-primary btn-soft flex-col h-full py-4">
+  </button>
+  <button onclick="showOnly('get-bonus')" class="btn btn-primary btn-soft flex-col h-full py-4">
     <img src="./assets/opt-4.png" alt="">
     <p class="opacity-50">Get Bonus</p>
-  </div>
-  <div class="btn btn-primary btn-soft flex-col h-full py-4">
+  </button>
+  <button class="btn btn-primary btn-soft flex-col h-full py-4">
     <img src="./assets/opt-5.png" alt="">
     <p class="opacity-50">Pay Bill</p>
-  </div>
-  <div class="btn btn-primary btn-soft flex-col h-full py-4">
+  </button>
+  <button class="btn btn-primary btn-soft flex-col h-full py-4">
     <img src="./assets/opt-6.png" alt="">
     <p class="opacity-50">Transactions</p>
-  </div>
+  </button>
 
     </div>
 
@@ -119,7 +119,7 @@
 
 
 
- <section class="add-money w-11/12  mx-auto py-8">
+ <section id="add-money" class=" w-11/12  mx-auto py-8 hidden">
 
 
    <h2 class="text-xl font-bold text-neutral/70">Add Money</h2>  
@@ -160,7 +160,7 @@
 
 
 
-  <section class="cashout w-11/12  mx-auto py-8 hidden">
+  <section id="cashout" class=" w-11/12  mx-auto py-8 hidden">
 
     <h2 class="text-xl font-bold text-neutral/70">Cashout</h2>
 
@@ -187,6 +187,58 @@
   </section>
 
 
+  <section id="transfer-money" class="w-11/12  mx-auto py-8 hidden">
+
+   <h2 class="text-xl font-bold text-neutral/70">Transfer Money</h2>
+  
+
+      
+    <div class="card bg-base-100 w-full   shadow  mt-4 rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-/70 ">User Account Number</label>
+          <input value="01234567890" id="transfer-money-number" type="number" maxlength="11" minlength="11" class="input rounded-full bg-base-200 w-full" placeholder="Enter 11 digit Number" />
+
+          <br>
+          <label class="label font-bold text-/70 ">Amount</label>
+          <input  id="Transer-money-amount" type="number" class="input rounded-full bg-base-200 w-full" placeholder="Enter amount to transfer" />
+
+          <br>
+
+          <label class="label font-bold text-neutral/70">Pin Number</label>
+          <input id="transfer-money-pin"  type="password" maxlength="4" class="input rounded-full bg-base-200 w-full" placeholder="Enter your 4 digit pin" />
+          
+          <button  id="transfer-btn"  class="btn btn-primary rounded-full  mt-4 font-semibold">Transfer Money</button>
+        </fieldset>
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+
+
+  <section id="get-bonus" class="w-11/12  mx-auto py-8 hidden">
+
+   
+   <h2 class="text-xl font-bold text-neutral/70">Get Bonus</h2>
+    
+    <div class="card bg-base-100 w-full   shadow  mt-4 rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-/70 ">Coupon</label>
+          <input value="" id="coupon-number" type="text" class="input rounded-full bg-base-200 w-full" placeholder="Enter your coupon ex: Abid-200" />
+
+          
+          <button  id="bonus-btn"  class="btn btn-primary rounded-full  mt-4 font-semibold">Get Bonus</button>
+        </fieldset>
+      </div>
+    </div>
+  </section>
+
+
 
 
 
@@ -199,5 +251,7 @@
 <script src="./script/machine.js"></script>
 <script src="./script/add-money.js"></script>
 <script src="./script/cashout.js"></script>
+<script src="./script/transfer.js"></script>
+<script src="./script/coupon.js"></script>
 </body>
 </html>
